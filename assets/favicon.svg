@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="14" fill="#f7f4ed"/>
   <g transform="translate(32 34)">
-    <ellipse cx="0" cy="3" rx="20" ry="21" fill="#b23c29"/>
-    <ellipse cx="0" cy="3" rx="20" ry="21" fill="none" stroke="#221f18" stroke-width="2.4"/>
-    <path d="M0 -18v42" stroke="#221f18" stroke-width="3"/>
-    <circle cx="0" cy="-19" r="8" fill="#221f18"/>
-    <path d="M-6 -25c-3-4-7-5-11-4M6 -25c3-4 7-5 11-4" stroke="#221f18" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-    <circle cx="-9" cy="-4" r="3.4" fill="#221f18"/><circle cx="9" cy="-4" r="3.4" fill="#221f18"/>
-    <circle cx="-11" cy="8" r="3" fill="#221f18"/><circle cx="11" cy="8" r="3" fill="#221f18"/>
-    <circle cx="-6" cy="18" r="2.4" fill="#221f18"/><circle cx="6" cy="18" r="2.4" fill="#221f18"/>
+    <ellipse cx="0" cy="3" rx="20" ry="21" fill="#d9412e"/>
+    <ellipse cx="0" cy="3" rx="20" ry="21" fill="none" stroke="#1e1e1e" stroke-width="2.4"/>
+    <path d="M0 -18v42" stroke="#1e1e1e" stroke-width="3"/>
+    <circle cx="0" cy="-19" r="8" fill="#1e1e1e"/>
+    <path d="M-6 -25c-3-4-7-5-11-4M6 -25c3-4 7-5 11-4" stroke="#1e1e1e" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <circle cx="-9" cy="-4" r="3.4" fill="#1e1e1e"/><circle cx="9" cy="-4" r="3.4" fill="#1e1e1e"/>
+    <circle cx="-11" cy="8" r="3" fill="#1e1e1e"/><circle cx="11" cy="8" r="3" fill="#1e1e1e"/>
+    <circle cx="-6" cy="18" r="2.4" fill="#1e1e1e"/><circle cx="6" cy="18" r="2.4" fill="#1e1e1e"/>
   </g>
 </svg>

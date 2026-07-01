@@ -42,24 +42,29 @@
     if (a.getAttribute('href') === map[page] && !a.classList.contains('navcta')) a.classList.add('current');
   });
 
-  /* ---------- team cards ---------- */
+  /* ---------- in-page anchor smooth scroll ---------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var id = a.getAttribute('href'); if (id.length < 2) return;
+      var t = document.querySelector(id); if (!t) return;
+      e.preventDefault();
+      if (lenis) lenis.scrollTo(t, { offset: -70 });
+      else t.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  /* ---------- team cards (personnel files) ---------- */
   function card(m) {
     return '<a class="person" href="member.html?id=' + m.id + '">'
-      + '<div class="frame"><img src="' + m.photo + '" alt="' + m.name + '｜' + m.role + '" loading="lazy">'
-      + '<span class="go" aria-hidden="true">↗</span></div>'
-      + '<div class="meta"><div><h3>' + m.name + '</h3><span class="role">' + m.role + '</span></div>'
-      + '<span class="idx">' + m.id + '</span></div></a>';
+      + '<span class="clip" aria-hidden="true"></span>'
+      + '<div class="frame"><img src="' + m.photo + '" alt="' + m.name + '｜' + m.role + '" loading="lazy"></div>'
+      + '<div class="meta"><span class="idx">FILE_' + m.id + '</span><h3>' + m.name + '</h3>'
+      + '<div class="role">' + m.role + '</div><span class="view">→ 看檔案</span></div></a>';
   }
   var prev = document.getElementById('team-preview');
   if (prev) prev.innerHTML = M.slice(0, 4).map(card).join('');
   var full = document.getElementById('team-full');
   if (full) full.innerHTML = M.map(card).join('');
-
-  /* ---------- hero photo strip ---------- */
-  var strip = document.getElementById('hero-strip');
-  if (strip) strip.innerHTML = M.map(function (m) {
-    return '<div class="ph"><img src="' + m.photo + '" alt="' + m.name + '" loading="eager"></div>';
-  }).join('');
 
   /* ---------- member detail ---------- */
   var root = document.getElementById('member-root');
