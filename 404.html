@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>找不到這隻 bug｜7aDy.bug</title>
+<meta name="theme-color" content="#f6efe0">
+<link rel="icon" href="/7adybug/assets/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&family=Noto+Serif+TC:wght@900&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;box-sizing:border-box}
+  body{min-height:100vh;display:grid;place-content:center;text-align:center;gap:8px;
+    padding:40px;font-family:"Noto Sans TC",sans-serif;color:#1a1712;background:#f6efe0;
+    background-image:radial-gradient(rgba(26,23,18,.05) 1.4px,transparent 1.4px);background-size:26px 26px}
+  .bug{width:110px;margin:0 auto 26px;animation:w 3s ease-in-out infinite}
+  @keyframes w{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
+  .code{font-family:"Space Mono",monospace;color:#a3160a;letter-spacing:.1em;font-size:.9rem}
+  h1{font-family:"Noto Serif TC",serif;font-size:clamp(2.4rem,7vw,4rem);margin:10px 0 6px}
+  h1 .r{color:#d8301f}
+  p{color:#4a4438;font-size:1.05rem;margin-bottom:26px}
+  a{display:inline-flex;align-items:center;gap:.6em;font-family:"Space Mono",monospace;font-weight:700;
+    background:#d8301f;color:#f6efe0;padding:14px 24px;border-radius:999px;text-decoration:none;transition:transform .2s}
+  a:hover{transform:translateY(-3px)}
+  a .d{width:9px;height:9px;border-radius:50%;background:#1a1712}
+</style>
+</head>
+<body>
+  <svg class="bug" viewBox="0 0 220 220" aria-hidden="true">
+    <ellipse cx="110" cy="122" rx="82" ry="88" fill="#d8301f"/><ellipse cx="110" cy="122" rx="82" ry="88" fill="none" stroke="#1a1712" stroke-width="2"/>
+    <path d="M110 40v168" stroke="#1a1712" stroke-width="4"/><circle cx="110" cy="38" r="28" fill="#1a1712"/>
+    <circle cx="99" cy="34" r="4.5" fill="#f6efe0"/><circle cx="121" cy="34" r="4.5" fill="#f6efe0"/>
+    <path d="M95 20c-8-10-18-12-26-10M125 20c8-10 18-12 26-10" stroke="#1a1712" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="84" cy="90" r="13" fill="#1a1712"/><circle cx="136" cy="90" r="13" fill="#1a1712"/>
+    <circle cx="78" cy="135" r="11" fill="#1a1712"/><circle cx="142" cy="135" r="11" fill="#1a1712"/>
+    <circle cx="96" cy="172" r="9" fill="#1a1712"/><circle cx="124" cy="172" r="9" fill="#1a1712"/>
+  </svg>
+  <p class="code">// error 404 · page not found</p>
+  <h1>這隻 <span class="r">bug</span> 我們也沒抓到</h1>
+  <p>你要找的頁面不存在，或已經被我們 debug 掉了。</p>
+  <a href="/7adybug/"><span class="d"></span>回首頁</a>
+</body>
+</html>
