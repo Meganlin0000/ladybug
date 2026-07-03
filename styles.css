@@ -440,7 +440,42 @@ body.menu-open .menu-btn span:nth-child(3){transform:translateY(-7.5px) rotate(-
 .step:nth-child(4) .num{color:var(--red);opacity:.55}
 .step:nth-child(5) .num{color:var(--green);opacity:.65}
 
-/* ===== 封面第一屏(像玖桃:一進來就是 7aDy.bug) ===== */
+/* ===== 入口封面頁(獨立 index:點了才進首頁) ===== */
+.splash{min-height:100vh;display:grid;place-items:center;padding:clamp(18px,4vw,40px);cursor:pointer}
+.splash-card{position:relative;background:var(--paper);border:2.5px solid var(--ink);
+  box-shadow:9px 11px 0 rgba(30,30,30,.16),0 26px 60px -24px rgba(30,30,30,.45);
+  padding:clamp(34px,6vw,58px) clamp(24px,6vw,64px) clamp(30px,5vw,46px);text-align:center;
+  transform:rotate(-1.2deg);max-width:660px;width:100%;animation:cardIn .75s cubic-bezier(.2,.8,.3,1.12) both}
+.splash-card::before{content:"CASE FILE ｜ BRAND DEBUG LAB";position:absolute;top:-21px;left:24px;
+  font-family:var(--mono);font-size:.72rem;font-weight:700;letter-spacing:.08em;background:var(--gray);
+  border:2px solid var(--ink);border-bottom:0;padding:4px 14px 5px}
+.splash-card::after{content:"NO.7 ／ 2026";position:absolute;top:14px;right:16px;font-family:var(--mono);font-size:.68rem;color:var(--muted)}
+.sp-tape{position:absolute;width:86px;height:24px;box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.sp-tape.t1{top:-13px;left:56%;background:rgba(207,217,230,.92);transform:rotate(-4deg)}
+.sp-tape.t2{bottom:-12px;right:12%;background:rgba(241,195,0,.8);transform:rotate(3deg)}
+.splash-logo{width:min(48vw,238px);margin:6px auto 4px;mix-blend-mode:multiply;
+  animation:logoIn .9s .15s cubic-bezier(.2,.8,.3,1.15) both}
+.splash-name{font-size:clamp(2.7rem,8vw,4.4rem);line-height:1.05;letter-spacing:.01em;margin-top:4px}
+.splash-name .red{color:var(--red)}
+.splash-sub{font-weight:800;color:var(--ink-2);margin-top:8px;font-size:clamp(.95rem,1.5vw,1.1rem)}
+.splash-line{display:flex;gap:8px;justify-content:center;margin:16px 0 22px;flex-wrap:wrap}
+.splash-line span{font-size:.78rem;font-weight:800;border:2px solid var(--ink);padding:4px 12px;background:var(--paper);box-shadow:2px 2px 0 rgba(30,30,30,.14)}
+.splash-line span:nth-child(1){background:var(--yellow)}
+.splash-line span:nth-child(3){background:var(--blue)}
+.splash-stamp{position:absolute;top:86px;right:-14px;font-family:var(--mono);font-weight:700;color:var(--red);
+  border:3px solid var(--red);padding:6px 14px;font-size:1rem;letter-spacing:.08em;background:rgba(255,253,247,.75);
+  transform:rotate(-10deg);animation:stampIn .45s .6s cubic-bezier(.2,.9,.3,1.4) both}
+.splash-sticky{position:absolute;left:-22px;bottom:132px;background:var(--yellow);font-weight:800;font-size:.86rem;
+  color:var(--ink);padding:12px 14px;max-width:150px;line-height:1.4;transform:rotate(-5deg);
+  box-shadow:2px 4px 8px rgba(0,0,0,.16);animation:cardIn .6s .4s both}
+.splash-hint{margin-top:14px;font-size:.85rem;font-weight:700;color:var(--red-deep);animation:cue 1.6s 1s ease-in-out infinite}
+@keyframes cardIn{from{opacity:0;transform:rotate(-1.2deg) translateY(34px) scale(.96)}to{opacity:1;transform:rotate(-1.2deg) translateY(0) scale(1)}}
+@keyframes logoIn{from{opacity:0;transform:scale(.82) rotate(-6deg)}to{opacity:1;transform:scale(1) rotate(0)}}
+@keyframes stampIn{from{opacity:0;transform:rotate(-10deg) scale(1.7)}to{opacity:1;transform:rotate(-10deg) scale(1)}}
+@media (max-width:560px){.splash-stamp{right:-8px;top:60px;font-size:.85rem}.splash-sticky{left:-10px;bottom:150px;max-width:126px;font-size:.8rem}}
+@media (prefers-reduced-motion:reduce){.splash-card,.splash-logo,.splash-stamp,.splash-sticky,.splash-hint{animation:none}}
+
+/* ===== 舊頁內封面(保留樣式相容) ===== */
 .cover{min-height:calc(100vh - 66px);display:grid;place-items:center;text-align:center;position:relative;padding:40px 20px}
 .cover-logo{width:min(56vw,330px);mix-blend-mode:multiply}
 .cover-name{font-size:clamp(3rem,9vw,5.8rem);line-height:1.05;margin-top:10px;letter-spacing:.01em}
