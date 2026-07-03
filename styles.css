@@ -356,9 +356,9 @@ body.menu-open .menu-btn span:nth-child(3){transform:translateY(-7.5px) rotate(-
 .svc-card:nth-child(6n+1)::before{background:var(--red);color:#fff}
 .svc-card:nth-child(6n+2)::before{background:var(--blue);color:var(--ink)}
 .svc-card:nth-child(6n+3)::before{background:var(--yellow);color:var(--ink)}
-.svc-card:nth-child(6n+4)::before{background:var(--ink);color:var(--paper)}
+.svc-card:nth-child(6n+4)::before{background:var(--blue);color:var(--ink)}
 .svc-card:nth-child(6n+5)::before{background:var(--red);color:#fff}
-.svc-card:nth-child(6n+6)::before{background:var(--blue);color:var(--ink)}
+.svc-card:nth-child(6n+6)::before{background:var(--yellow);color:var(--ink)}
 
 .case:nth-child(4n+1)::before{background:var(--red);color:#fff}
 .case:nth-child(4n+2)::before{background:var(--yellow);color:var(--ink)}
@@ -439,6 +439,38 @@ body.menu-open .menu-btn span:nth-child(3){transform:translateY(-7.5px) rotate(-
 .step:nth-child(3) .num{color:var(--blue);opacity:.85}
 .step:nth-child(4) .num{color:var(--red);opacity:.55}
 .step:nth-child(5) .num{color:var(--green);opacity:.65}
+
+/* ===== 封面第一屏(像玖桃:一進來就是 7aDy.bug) ===== */
+.cover{min-height:calc(100vh - 66px);display:grid;place-items:center;text-align:center;position:relative;padding:40px 20px}
+.cover-logo{width:min(56vw,330px);mix-blend-mode:multiply}
+.cover-name{font-size:clamp(3rem,9vw,5.8rem);line-height:1.05;margin-top:10px;letter-spacing:.01em}
+.cover-name .red{color:var(--red)}
+.cover-sub{font-size:clamp(1rem,1.6vw,1.25rem);font-weight:700;color:var(--ink-2);margin-top:10px}
+.cover-tags{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.cover-tags span{font-size:.8rem;font-weight:800;border:2px solid var(--ink);background:var(--paper);padding:5px 13px;box-shadow:var(--shadow-sm)}
+.cover-tags span:nth-child(1){background:var(--yellow)}
+.cover-tags span:nth-child(3){background:var(--blue)}
+.scroll-cue{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-weight:800;font-size:.86rem;color:var(--red-deep);animation:cue 1.6s ease-in-out infinite}
+@keyframes cue{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,7px)}}
+@media (prefers-reduced-motion:reduce){.scroll-cue{animation:none}}
+
+/* ===== 時間規劃 ===== */
+.timeline{display:grid;gap:16px}
+.phase{background:var(--paper);border:2px solid var(--ink);box-shadow:var(--shadow-sm);padding:22px 24px;display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:start}
+.phase .when{font-weight:900;color:#fff;background:var(--red);border:2px solid var(--ink);padding:4px 12px;justify-self:start;font-size:.9rem}
+.phase:nth-child(2) .when{background:var(--yellow);color:var(--ink)}
+.phase:nth-child(3) .when{background:var(--blue);color:var(--ink)}
+.phase:nth-child(4) .when{background:var(--red)}
+.phase h3{font-size:1.15rem;margin-bottom:6px}
+.phase ul{list-style:none;color:var(--ink-2);font-size:.95rem}
+.phase ul li{padding-left:18px;position:relative;margin-bottom:3px}
+.phase ul li::before{content:"·";position:absolute;left:4px;color:var(--red);font-weight:900}
+@media (max-width:640px){.phase{grid-template-columns:1fr;gap:10px}}
+
+/* ===== 方案價格 ===== */
+.plan .price{font-weight:900;font-size:2rem;letter-spacing:.01em;color:var(--red);margin:2px 0 10px}
+.plan .price small{font-size:1rem;color:var(--muted);font-weight:700}
+.plan.feature .price{color:var(--red-deep)}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(26px)}
