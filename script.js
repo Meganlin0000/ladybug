@@ -87,7 +87,7 @@
     return '<a class="person" href="member.html?id=' + m.id + '">'
       + '<span class="clip" aria-hidden="true"></span>'
       + '<div class="frame"><img src="' + m.photo + '" alt="' + m.name + '｜' + m.role + '" loading="lazy"></div>'
-      + '<div class="meta"><span class="idx">FILE_' + m.id + '</span><h3>' + m.name + '</h3>'
+      + '<div class="meta"><h3>' + m.name + '</h3>'
       + '<div class="role">' + m.role + '</div><span class="view">→ 看檔案</span></div></a>';
   }
   var prev = document.getElementById('team-preview');
