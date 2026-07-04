@@ -57,11 +57,11 @@
   /* ---------- lightbox: [data-zoom] 圖片 / [data-video] YouTube / [data-embed] Drive 簡報·影片 ---------- */
   var lb = document.createElement('div');
   lb.className = 'lightbox';
-  lb.innerHTML = '<div class="lb-stage"></div><span class="lb-tip">點旁邊空白處關閉 · ESC</span>';
+  lb.innerHTML = '<button class="lb-x" aria-label="關閉">✕ 關閉</button><div class="lb-stage"></div><span class="lb-tip">點 ✕ 或旁邊空白處關閉</span>';
   document.body.appendChild(lb);
   var stage = lb.querySelector('.lb-stage');
-  function lbOpen(html) { stage.innerHTML = html; lb.classList.add('open'); if (lenis) lenis.stop(); }
-  function lbClose() { lb.classList.remove('open'); stage.innerHTML = ''; if (lenis) lenis.start(); }
+  function lbOpen(html) { stage.innerHTML = html; lb.classList.add('open'); document.body.style.overflow = 'hidden'; if (lenis) lenis.stop(); }
+  function lbClose() { lb.classList.remove('open'); stage.innerHTML = ''; document.body.style.overflow = ''; if (lenis) lenis.start(); }
   document.addEventListener('click', function (e) {
     var t = e.target.closest('[data-zoom],[data-video],[data-embed]');
     if (t) {
@@ -76,7 +76,7 @@
       }
       return;
     }
-    if (e.target.classList && (e.target.classList.contains('lightbox') || e.target.classList.contains('lb-stage') || e.target.tagName === 'IMG' && e.target.closest('.lb-stage'))) lbClose();
+    if (e.target.closest('.lb-x') || (e.target.classList && (e.target.classList.contains('lightbox') || e.target.classList.contains('lb-stage') || (e.target.tagName === 'IMG' && e.target.closest('.lb-stage'))))) lbClose();
   });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && lb.classList.contains('open')) lbClose();
@@ -93,7 +93,11 @@
   var prev = document.getElementById('team-preview');
   if (prev) prev.innerHTML = M.slice(0, 4).map(card).join('');
   var full = document.getElementById('team-full');
-  if (full) full.innerHTML = M.map(card).join('');
+  if (full) {
+    var lead = M.find(function (m) { return m.id === '04'; });
+    var rest = M.filter(function (m) { return m.id !== '04'; });
+    full.innerHTML = card(lead).replace('class="person"', 'class="person lead-card"') + rest.map(card).join('');
+  }
 
   /* ---------- member detail ---------- */
   var root = document.getElementById('member-root');
