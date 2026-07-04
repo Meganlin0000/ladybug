@@ -247,7 +247,7 @@ body.menu-open .menu-btn span:nth-child(3){transform:translateY(-7.5px) rotate(-
    Team (personnel files)
    ===================================================================== */
 .team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 22px;max-width:820px;margin:0 auto}
-.person.lead-card{grid-column:1/-1;max-width:380px;margin:0 auto;width:100%}
+.person.lead-card{grid-column:1/-1;justify-self:center;width:calc(50% - 11px)}
 .person.lead-card .idx{background:var(--yellow);color:var(--ink)}
 .person{display:block;background:var(--paper);border:2px solid var(--ink);box-shadow:var(--shadow);padding:12px 12px 16px;position:relative;transition:transform .22s;color:inherit}
 .person:nth-child(2n){transform:rotate(-.8deg)}
@@ -450,6 +450,13 @@ body.menu-open .menu-btn span:nth-child(3){transform:translateY(-7.5px) rotate(-
   box-shadow:9px 11px 0 rgba(30,30,30,.16),0 26px 60px -24px rgba(30,30,30,.45);
   padding:clamp(34px,6vw,58px) clamp(24px,6vw,64px) clamp(30px,5vw,46px);text-align:center;
   transform:rotate(-1.2deg);max-width:660px;width:100%;animation:cardIn .75s cubic-bezier(.2,.8,.3,1.12) both}
+.scrap{position:absolute;z-index:0;pointer-events:none}
+.logo-wrap{position:relative;display:inline-block;margin:2px auto 0}
+.scrap.s1{width:clamp(60px,14vw,90px);height:clamp(60px,14vw,90px);background:var(--yellow);top:-4%;left:-21%;transform:rotate(-10deg)}
+.scrap.s2{width:clamp(50px,12vw,76px);height:clamp(50px,12vw,76px);border-radius:50%;background:var(--blue);bottom:1%;right:-17%}
+.scrap.s4{width:58px;height:58px;bottom:16%;left:6.5%;transform:rotate(6deg);opacity:.5;
+  background-image:radial-gradient(var(--ink) 1.6px,transparent 1.6px);background-size:10px 10px}
+.scrap.s5{width:46px;height:46px;bottom:12%;right:7.5%;background:var(--yellow);clip-path:polygon(50% 0,100% 100%,0 100%);opacity:.9;transform:rotate(-12deg)}
 .splash-card::before{content:"CASE FILE ｜ 7aDy.bug";position:absolute;top:-21px;left:24px;
   font-family:var(--mono);font-size:.72rem;font-weight:700;letter-spacing:.08em;background:var(--gray);
   border:2px solid var(--ink);border-bottom:0;padding:4px 14px 5px}
@@ -457,7 +464,7 @@ body.menu-open .menu-btn span:nth-child(3){transform:translateY(-7.5px) rotate(-
 .sp-tape{position:absolute;width:86px;height:24px;box-shadow:0 1px 2px rgba(0,0,0,.12)}
 .sp-tape.t1{top:-13px;right:16%;background:rgba(207,217,230,.92);transform:rotate(-4deg)}
 .sp-tape.t2{bottom:-12px;right:12%;background:rgba(241,195,0,.8);transform:rotate(3deg)}
-.splash-logo{width:min(46vw,225px);margin:4px auto 2px;
+.splash-logo{width:min(42vw,205px);margin:2px auto 0;position:relative;z-index:1;
   animation:logoIn .9s .15s cubic-bezier(.2,.8,.3,1.15) both}
 .splash-name{font-size:clamp(2.6rem,7.6vw,4.2rem);line-height:1.05;letter-spacing:.01em;margin-top:10px}
 .splash-name .red{color:var(--red)}
@@ -479,7 +486,9 @@ body.menu-open .menu-btn span:nth-child(3){transform:translateY(-7.5px) rotate(-
 @keyframes logoIn{from{opacity:0;transform:scale(.82) rotate(-6deg)}to{opacity:1;transform:scale(1) rotate(0)}}
 @keyframes hintNod{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
 @keyframes stampIn{from{opacity:0;transform:rotate(-10deg) scale(1.7)}to{opacity:1;transform:rotate(-10deg) scale(1)}}
-@media (max-width:560px){.splash-stamp{right:-6px;top:56px;font-size:.8rem;padding:5px 10px}.splash-sticky{position:static;display:inline-block;margin:16px auto 0;transform:rotate(-2deg);max-width:none;font-size:.82rem}}
+@media (max-width:640px){.report .stamp{top:-15px;right:12px;font-size:.85rem;padding:4px 10px;background:var(--paper)}
+  .report .sticky{bottom:-20px;right:-6px;font-size:.8rem}}
+@media (max-width:560px){.splash-stamp{top:12px;right:10px;font-size:.7rem;padding:4px 9px}.scrap.s4{display:none}.scrap.s5{width:36px;height:36px;bottom:9%;right:6%}}
 @media (prefers-reduced-motion:reduce){.splash-card,.splash-logo,.splash-stamp,.splash-sticky,.splash-hint{animation:none}}
 
 /* ===== 舊頁內封面(保留樣式相容) ===== */
