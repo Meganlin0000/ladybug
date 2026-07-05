@@ -512,7 +512,11 @@ body.menu-open .menu-btn span:nth-child(3){transform:translateY(-7.5px) rotate(-
 
 /* ===== 時間規劃 ===== */
 .timeline{display:grid;gap:16px}
-.phase{background:var(--paper);border:2px solid var(--ink);box-shadow:var(--shadow-sm);padding:22px 24px;display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:start}
+.phase{background:var(--paper);border:2px solid var(--ink);box-shadow:var(--shadow-sm);padding:22px 24px;display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:start;
+  transition:transform .22s,box-shadow .22s}
+.phase:hover{transform:translate(-2px,-5px) scale(1.02);box-shadow:10px 13px 0 rgba(30,30,30,.18);z-index:2;position:relative}
+.phase .when{transition:transform .25s}
+.phase:hover .when{transform:rotate(-4deg) scale(1.06)}
 .phase .when{font-weight:900;color:#fff;background:var(--red);border:2px solid var(--ink);padding:4px 12px;justify-self:start;font-size:.9rem}
 .phase:nth-child(2) .when{background:var(--yellow);color:var(--ink)}
 .phase:nth-child(3) .when{background:var(--blue);color:var(--ink)}

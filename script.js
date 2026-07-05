@@ -167,7 +167,7 @@
       gsap.set(el, { opacity: 0, y: 34 });
       // 卡片網格內依序小錯落(svc/teaser/team),低調瀑布感
       var stag = 0, par = el.parentElement;
-      if (par && /(?:^| )(?:svc-grid|teaser-row|team-grid|memo-grid)(?: |$)/.test(par.className)) {
+      if (par && /(?:^| )(?:svc-grid|teaser-row|team-grid|memo-grid|timeline)(?: |$)/.test(par.className)) {
         stag = Math.min(Array.prototype.indexOf.call(par.children, el) * 0.07, 0.42);
       }
       if (el.getBoundingClientRect().top < window.innerHeight * 0.94) {
