@@ -198,10 +198,12 @@ body.menu-open .menu-btn span:nth-child(3){transform:translateY(-7.5px) rotate(-
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px 24px}
 @media (max-width:860px){.svc-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.svc-grid{grid-template-columns:1fr}}
-.svc-card{background:var(--paper);border:2px solid var(--ink);box-shadow:var(--shadow);padding:30px 26px;position:relative;transition:transform .22s}
+.svc-card{background:var(--paper);border:2px solid var(--ink);box-shadow:var(--shadow);padding:30px 26px;position:relative;transition:transform .22s,box-shadow .22s}
 .svc-card::before{content:attr(data-no);position:absolute;top:-17px;left:20px;font-family:var(--mono);font-size:.72rem;font-weight:700;
   background:var(--ink);color:var(--paper);padding:4px 11px 5px}
-.svc-card:hover{transform:translateY(-5px)}
+.svc-card:hover{transform:translate(-3px,-4px);box-shadow:7px 9px 0 rgba(30,30,30,.16)}
+.svc-card::before{transition:transform .25s}
+.svc-card:hover::before{transform:rotate(-5deg) scale(1.07)}
 .svc-card h3{font-size:1.22rem;margin-bottom:10px}
 .svc-card p{font-size:.94rem;color:var(--ink-2);margin:0}
 

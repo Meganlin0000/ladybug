@@ -165,12 +165,17 @@
     // section reveals — anything already on screen shows immediately (mobile-safe)
     reveals.forEach(function (el) {
       gsap.set(el, { opacity: 0, y: 34 });
+      // 卡片網格內依序小錯落(svc/teaser/team),低調瀑布感
+      var stag = 0, par = el.parentElement;
+      if (par && /(?:^| )(?:svc-grid|teaser-row|team-grid|memo-grid)(?: |$)/.test(par.className)) {
+        stag = Math.min(Array.prototype.indexOf.call(par.children, el) * 0.07, 0.42);
+      }
       if (el.getBoundingClientRect().top < window.innerHeight * 0.94) {
-        gsap.to(el, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', delay: 0.06 });
+        gsap.to(el, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', delay: 0.06 + stag });
       } else {
         ScrollTrigger.create({
           trigger: el, start: 'top 88%', once: true,
-          onEnter: function () { gsap.to(el, { opacity: 1, y: 0, duration: 0.95, ease: 'power3.out' }); }
+          onEnter: function () { gsap.to(el, { opacity: 1, y: 0, duration: 0.95, ease: 'power3.out', delay: stag }); }
         });
       }
     });
