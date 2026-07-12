@@ -166,14 +166,14 @@ body.menu-open .menu-btn span:nth-child(3){transform:translateY(-7.5px) rotate(-
 /* =====================================================================
    Debug process (5 steps flow)
    ===================================================================== */
-.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:2px solid var(--ink);background:var(--paper);box-shadow:var(--shadow)}
+.flow{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border:2px solid var(--ink);background:var(--paper);box-shadow:var(--shadow)}
 .step{padding:26px 20px;border-right:2px dashed var(--line);position:relative}
 .step:last-child{border-right:0}
 .step .en{font-family:var(--mono);font-size:.72rem;font-weight:700;color:var(--red);letter-spacing:.06em}
 .step .zh{font-size:1.15rem;font-weight:900;margin:6px 0 10px}
 .step p{font-size:.86rem;color:var(--muted);margin:0;line-height:1.6}
 .step .num{position:absolute;top:14px;right:14px;font-family:var(--mono);font-weight:700;color:var(--gray);font-size:1.5rem;line-height:1}
-.step:nth-child(-n+4)::after{content:"→";position:absolute;top:24px;right:-11px;color:var(--red);font-weight:900;background:var(--paper);z-index:2;font-size:1rem}
+.step:nth-child(-n+5)::after{content:"→";position:absolute;top:24px;right:-11px;color:var(--red);font-weight:900;background:var(--paper);z-index:2;font-size:1rem}
 @media (max-width:900px){.flow{grid-template-columns:1fr 1fr}.step{border-right:0;border-bottom:2px dashed var(--line)}
   .step:nth-child(2n){border-right:0}.step::after{display:none!important}.step:last-child{border-bottom:0}}
 @media (max-width:520px){.flow{grid-template-columns:1fr}}
@@ -293,6 +293,14 @@ body.menu-open .menu-btn span:nth-child(3){transform:translateY(-7.5px) rotate(-
 .form .btn{width:100%;justify-content:center;margin-top:8px}
 .form-note{font-size:.82rem;color:var(--muted);margin-top:14px}
 
+.pron{font-size:.92rem;color:var(--ink-2);margin-top:14px}
+.pron b{color:var(--red)}
+.toolgroups{display:grid;gap:14px}
+.tglabel{display:block;font-size:.76rem;font-weight:800;color:var(--red-deep);letter-spacing:.06em;margin-bottom:6px}
+.report li a{color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:.4em;transition:color .18s}
+.report li a .go{font-size:.8em;opacity:0;transform:translate(-3px,2px);transition:all .18s;color:var(--red)}
+.report li a:hover{color:var(--red)}
+.report li a:hover .go{opacity:1;transform:none}
 .grouplabel{font-size:.85rem;font-weight:800;color:var(--muted);letter-spacing:.08em;margin-bottom:14px}
 /* 五步驟流程進場 */
 .flow .step{opacity:0;transform:translateY(16px)}
@@ -302,12 +310,14 @@ body.menu-open .menu-btn span:nth-child(3){transform:translateY(-7.5px) rotate(-
 .flow.flow-in .step:nth-child(3){transition-delay:.27s}
 .flow.flow-in .step:nth-child(4){transition-delay:.38s}
 .flow.flow-in .step:nth-child(5){transition-delay:.49s}
+.flow.flow-in .step:nth-child(6){transition-delay:.6s}
 .flow .step::after{opacity:0}
 .flow.flow-in .step::after{opacity:1;transition:opacity .35s ease}
 .flow.flow-in .step:nth-child(1)::after{transition-delay:.3s}
 .flow.flow-in .step:nth-child(2)::after{transition-delay:.41s}
 .flow.flow-in .step:nth-child(3)::after{transition-delay:.52s}
 .flow.flow-in .step:nth-child(4)::after{transition-delay:.63s}
+.flow.flow-in .step:nth-child(5)::after{transition-delay:.74s}
 @media (prefers-reduced-motion:reduce){.flow .step,.flow .step::after{opacity:1!important;transform:none!important;transition:none!important}}
 
 /* CTA + footer */
@@ -425,6 +435,7 @@ body.menu-open .menu-btn span:nth-child(3){transform:translateY(-7.5px) rotate(-
 .step:nth-child(3) .num{color:#8fa6c2}
 .step:nth-child(4) .num{color:var(--red);opacity:.7}
 .step:nth-child(5) .num{color:#d9a900}
+.step:nth-child(6) .num{color:#8fa6c2}
 
 /* ===== 入口封面頁(獨立 index:點了才進首頁) ===== */
 @media (max-width:640px){.report .stamp{font-size:.85rem;padding:4px 10px}
