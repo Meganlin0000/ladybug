@@ -301,7 +301,7 @@ body.menu-open .menu-btn span:nth-child(3){transform:translateY(-7.5px) rotate(-
 .report li a .go{font-size:.8em;opacity:0;transform:translate(-3px,2px);transition:all .18s;color:var(--red)}
 .report li a:hover{color:var(--red)}
 .report li a:hover .go{opacity:1;transform:none}
-.circle.wide::after{inset:-46% -12%}
+.circle.wide::after{inset:-60% -20%}
 .grouplabel{font-size:.85rem;font-weight:800;color:var(--muted);letter-spacing:.08em;margin-bottom:14px}
 /* 五步驟流程進場 */
 .flow .step{opacity:0;transform:translateY(16px)}
