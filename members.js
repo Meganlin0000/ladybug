@@ -4,8 +4,8 @@ window.MEMBERS = [
   { id:"01", name:"吳苡榛", role:"創意企劃", photo:"assets/team/01.jpg",
     focus:["創意發想","文案撰寫","新聞採訪"],
     bio:["外向、擅溝通、注重細節。負責創意發想與文案撰寫，習慣從採訪與觀察找切入點，再把想法整理成可執行的企劃。",
-         "曾任淡江電視台文字記者，獲 114 學期最佳新聞第二名；入圍 JIA 銀響力新聞獎。"],
-    hi:["入圍 JIA 銀響力新聞獎（文字記者）","淡江電視台文字記者｜114 學期最佳新聞第二名","2025 InnoConnect＋／2026 大創意家＋AI 行銷競賽"],
+         "曾任淡江電視台文字記者，獲 114 學期最佳新聞第二名；榮獲 JIA 銀響力新聞獎特優。"],
+    hi:["JIA 銀響力新聞獎｜榮獲特優","淡江電視台文字記者｜114 學期最佳新聞第二名","2025 InnoConnect＋／2026 大創意家＋AI 行銷競賽"],
     works:[
       {t:"▶ 淡江新聞專題｜平溪守護失智長者", video:"gKB6xSr5BzU"},
       {t:"▶ 泰山大吸館 提案簡報", embed:"https://drive.google.com/file/d/1qn2ziUfKFuRfR0jVvUCdc_Cjkjya9xkB/preview"},
