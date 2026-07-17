@@ -27,6 +27,7 @@ window.MEMBERS = [
     works:[
       {t:"▶ 金帶獎最佳節目第二名（淡江之聲）", embed:"https://drive.google.com/file/d/1J7FJSGutpkzYFUHOukUcDtje9O2pfeFr/preview"},
       {t:"▶ 廣播劇《穿越吧性別小偵探》", embed:"https://drive.google.com/file/d/1b4ZBdFaLD7eJBYN7TYn8LkrDUNoV9dip/preview"},
+      {t:"PopUp Asia 手創展 課程報告 ↗", href:"assets/works/popupasia.pdf"},
       {t:"🔍 淡江之聲 VOTK 文宣設計", zoom:"assets/works/poster-votk.jpg"},
       {t:"林采頤作品集（Google Drive） ↗", href:"https://drive.google.com/drive/folders/1BX1MiXftYNx2bINy1oRumg2jAdJfD126"}
     ]},
@@ -37,7 +38,8 @@ window.MEMBERS = [
     hi:["2025 InnoConnect＋｜創意發想・顧客旅程地圖","2026 大創意家＋AI 行銷競賽｜AI 生成影片/圖片","淡江影像藝術工坊｜攝影・人像打燈"],
     works:[
       {t:"▶ 泰山大吸館 提案簡報", embed:"https://drive.google.com/file/d/1qn2ziUfKFuRfR0jVvUCdc_Cjkjya9xkB/preview"},
-      {t:"▶ 阿瘦皮鞋 InnoConnect＋ 簡報", embed:"https://drive.google.com/file/d/1alHFpmrN52Zk0fnxdrgARiNT4a-7yB11/preview"}
+      {t:"▶ 阿瘦皮鞋 InnoConnect＋ 簡報", embed:"https://drive.google.com/file/d/1alHFpmrN52Zk0fnxdrgARiNT4a-7yB11/preview"},
+      {t:"PopUp Asia 手創展 課程報告 ↗", href:"assets/works/popupasia.pdf"}
     ]},
   { id:"05", name:"李宜臻", role:"視覺設計", photo:"assets/team/05.jpg",
     focus:["主視覺設計","周邊設計","對外溝通"],
