@@ -12,7 +12,7 @@
   <text x="128" y="316" font-size="40" font-weight="900" fill="#1e1e1e">整合行銷團隊</text>
   <text x="128" y="392" font-size="34" font-weight="700" fill="#4a463f">找出品牌卡點，<tspan fill="#e04410">變成活動亮點</tspan>。</text>
   <text x="128" y="452" font-size="24" fill="#847d70">淡江大傳 41st 畢業製作行銷組</text>
-  <text x="128" y="512" font-size="22" font-family="Menlo,monospace" fill="#b53409">7adybug.vercel.app</text>
+  <text x="128" y="512" font-size="22" font-family="Menlo,monospace" fill="#b53409">ladybug-tku.vercel.app</text>
 </g>
 <g transform="rotate(-9 1005 160)"><rect x="915" y="128" width="188" height="56" fill="none" stroke="#e04410" stroke-width="5"/>
 <text x="932" y="166" font-family="Menlo,monospace" font-size="26" font-weight="bold" fill="#e04410" letter-spacing="2">LET'S DEBUG!</text></g>
